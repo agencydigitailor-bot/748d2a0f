@@ -43,7 +43,7 @@ const sortKey = (item) => item.sort || item.date;
 
 const actionMarkup = (item, inert) => {
   if (item.state === "onsale" && item.url) {
-    const btn = `Billets
+    const btn = `Billetteries
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>`;
     return inert
       ? `<span class="btn" aria-hidden="true">${btn}</span>`
@@ -84,7 +84,7 @@ const rowMarkup = (item) => {
 
   const tag = link ? "a" : "div";
   const attrs = link
-    ? ` href="${esc(item.url)}" target="_blank" rel="noopener" aria-label="${esc(item.city)} — billets"`
+    ? ` href="${esc(item.url)}" target="_blank" rel="noopener" aria-label="${esc(item.city)} — billetteries"`
     : "";
 
   return `<li class="date-row">
