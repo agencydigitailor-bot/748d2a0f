@@ -7,7 +7,7 @@
 
 const TOUR = [
   { date: "2027-01-29", city: "Rennes",      venue: "L'Étage",                            tags: [],           state: "soldout" },
-  { date: "2027-01-29", city: "Rennes",      venue: "L'Espace Club",                      tags: ["Showcase"], state: "soon" },
+  { date: "2027-01-29", city: "Rennes",      venue: "L'Espace Club",                      tags: ["Showcase"], state: "onsale", url: "https://shotgun.live/fr/events/niro-x-l-espace-club" },
   { date: "2027-03-20", city: "Avignon",     venue: "Salle de l'Étoile",                  tags: [],           state: "soon" },
   { date: "2027-03-27", city: "Amnéville",   venue: "Le Galaxie",                         tags: ["Showcase"], state: "soon" },
   { date: "2027-04-02", city: "Toulouse",    venue: "Salle Interférence",                 tags: [],           state: "soon" },
@@ -41,10 +41,13 @@ const parse = (iso) => new Date(`${iso}T12:00:00`);
 
 const sortKey = (item) => item.sort || item.date;
 
-const actionMarkup = (item) => {
+const actionMarkup = (item, inert) => {
   if (item.state === "onsale" && item.url) {
-    return `<a class="btn" href="${esc(item.url)}" target="_blank" rel="noopener">Billets
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>`;
+    const btn = `Billets
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>`;
+    return inert
+      ? `<span class="btn" aria-hidden="true">${btn}</span>`
+      : `<a class="btn" href="${esc(item.url)}" target="_blank" rel="noopener">${btn}</a>`;
   }
   if (item.state === "soldout") {
     return `<span class="badge badge--soldout">Complet</span>`;
@@ -66,15 +69,16 @@ const rowMarkup = (item) => {
     ? `<p class="date-venue">${esc(item.venue)}</p>`
     : "";
 
+  const link = item.state === "onsale" && item.url;
+
   const inner = `
     <div class="date-day">
       <span class="date-num${item.dayText ? " is-text" : ""}">${esc(day)}</span>
       <span class="date-wd">${esc(wd)}</span>
     </div>
     <div class="date-main">${cityLine}${venueLine}</div>
-    <div class="date-action">${actionMarkup(item)}</div>`;
+    <div class="date-action">${actionMarkup(item, link)}</div>`;
 
-  const link = item.state === "onsale" && item.url;
   const tag = link ? "a" : "div";
   const attrs = link
     ? ` href="${esc(item.url)}" target="_blank" rel="noopener" aria-label="${esc(item.city)} — billets"`
