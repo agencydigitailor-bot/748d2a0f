@@ -127,21 +127,6 @@ a { color: inherit; text-decoration: none; }
 
 .head-meta { color: var(--muted); }
 
-.head-cta {
-  position: relative;
-  padding-bottom: 3px;
-}
-.head-cta::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 1px;
-  background: currentColor;
-  transform-origin: right;
-  transition: transform 0.5s var(--ease);
-}
-.head-cta:hover::after { transform: scaleX(0); }
-
 /* ---------- hero ---------- */
 
 .hero {
