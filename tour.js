@@ -6,23 +6,23 @@
    --------------------------------------------------------------- */
 
 const TOUR = [
-  { date: "2027-01-29", city: "Rennes",      venue: "L'Étage",                            tags: [],           state: "soldout" },
-  { date: "2027-01-29", city: "Rennes",      venue: "L'Espace Club",                      tags: ["Showcase"], state: "onsale", url: "https://shotgun.live/fr/events/niro-x-l-espace-club" },
-  { date: "2027-03-20", city: "Avignon",     venue: "Salle de l'Étoile",                  tags: [],           state: "soon" },
-  { date: "2027-03-27", city: "Amnéville",   venue: "Le Galaxie",                         tags: ["Showcase"], state: "soon" },
-  { date: "2027-04-02", city: "Toulouse",    venue: "Salle Interférence",                 tags: [],           state: "onsale", url: "https://spectacles.bleucitron.net/reserver/niro-interference-balma/10783" },
-  { date: "2027-04-03", city: "Bordeaux",    venue: "Salle du Grand Parc",                tags: [],           state: "soldout" },
-  { date: "2027-04-09", city: "Amiens",      venue: "Zénith Amiens",                      tags: [],           state: "soldout" },
-  { date: "2027-04-10", city: "Rennes",      venue: "BOOMIN FEST",                        tags: ["Festival"], state: "onsale", url: "https://shotgun.live/fr/events/boomin-fest-rennes-liberte" },
-  { date: "2027-04-14", city: "Lyon",        venue: "Le Transbordeur",                    tags: [],           state: "soon" },
-  { date: "2027-04-23", city: "Brest",       venue: "Brest Arena",                        tags: [],           state: "soon" },
-  { date: "2027-04-24", city: "Bruxelles",   venue: "La Madeleine",                       tags: ["Belgique"], state: "soon" },
-  { date: "2027-05-05", city: "Lille",       venue: "Zénith Lille",                       tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/rawww-verone-niro-zenith-lille" },
-  { date: "2027-05-14", city: "Montpellier", venue: "Rockstore",                          tags: [],           state: "soldout" },
-  { date: "2027-05-15", city: "Marseille",   venue: "Salle des Sucres",                   tags: [],           state: "soon" },
-  { date: "2027-05-22", city: "Nantes",      venue: "BOOMIN FEST",                        tags: ["Festival"], state: "soon" },
-  { sort: "2027-07-01", dayText: "Début", wdText: "juil.", city: "Liège", venue: "Les Ardentes", tags: ["Festival", "Belgique"], state: "soon" },
-  { date: "2027-08-28", city: "Dijon",       venue: "Golden Coast Festival",              tags: ["Festival"], state: "soon" }
+  { date: "2027-01-29", city: "Rennes",      venue: "L'Étage",                 kind: "Concert",  tags: [],           state: "soldout" },
+  { date: "2027-01-29", city: "Rennes",      venue: "L'Espace Club",           kind: "Showcase", tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/niro-x-l-espace-club" },
+  { date: "2027-03-20", city: "Avignon",     venue: "Salle de l'Étoile",       kind: "Concert",  tags: [],           state: "soon" },
+  { date: "2027-03-27", city: "Amnéville",   venue: "Le Galaxie",              kind: "Showcase", tags: [],           state: "soon" },
+  { date: "2027-04-02", city: "Toulouse",    venue: "Salle Interférence",      kind: "Concert",  tags: [],           state: "onsale", url: "https://spectacles.bleucitron.net/reserver/niro-interference-balma/10783" },
+  { date: "2027-04-03", city: "Bordeaux",    venue: "Salle du Grand Parc",     kind: "Concert",  tags: [],           state: "soldout" },
+  { date: "2027-04-09", city: "Amiens",      venue: "Zénith Amiens",           kind: "Concert",  tags: [],           state: "soldout" },
+  { date: "2027-04-10", city: "Rennes",      venue: "BOOMIN FEST",             kind: "Festival", tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/boomin-fest-rennes-liberte" },
+  { date: "2027-04-14", city: "Lyon",        venue: "Le Transbordeur",         kind: "Concert",  tags: [],           state: "soon" },
+  { date: "2027-04-23", city: "Brest",       venue: "Brest Arena",             kind: "Concert",  tags: [],           state: "soon" },
+  { date: "2027-04-24", city: "Bruxelles",   venue: "La Madeleine",            kind: "Concert",  tags: ["Belgique"], state: "soon" },
+  { date: "2027-05-05", city: "Lille",       venue: "Zénith Lille",            kind: "Concert",  tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/rawww-verone-niro-zenith-lille" },
+  { date: "2027-05-14", city: "Montpellier", venue: "Rockstore",               kind: "Concert",  tags: [],           state: "soldout" },
+  { date: "2027-05-15", city: "Marseille",   venue: "Salle des Sucres",        kind: "Concert",  tags: [],           state: "soon" },
+  { date: "2027-05-22", city: "Nantes",      venue: "BOOMIN FEST",             kind: "Festival", tags: [],           state: "soon" },
+  { sort: "2027-07-01", dayText: "Début", wdText: "juil.", city: "Liège", venue: "Les Ardentes", kind: "Festival", tags: ["Belgique"], state: "soon" },
+  { date: "2027-08-28", city: "Dijon",       venue: "Golden Coast Festival",   kind: "Festival", tags: [],           state: "soon" }
 ];
 
 /* --------------------------------------------------------------- */
@@ -68,6 +68,9 @@ const rowMarkup = (item) => {
   const venueLine = item.venue
     ? `<p class="date-venue">${esc(item.venue)}</p>`
     : "";
+  const kindLine = item.kind
+    ? `<p class="date-kind">${esc(item.kind)}</p>`
+    : "";
 
   const link = item.state === "onsale" && item.url;
 
@@ -76,7 +79,7 @@ const rowMarkup = (item) => {
       <span class="date-num${item.dayText ? " is-text" : ""}">${esc(day)}</span>
       <span class="date-wd">${esc(wd)}</span>
     </div>
-    <div class="date-main">${cityLine}${venueLine}</div>
+    <div class="date-main">${cityLine}${venueLine}${kindLine}</div>
     <div class="date-action">${actionMarkup(item, link)}</div>`;
 
   const tag = link ? "a" : "div";
