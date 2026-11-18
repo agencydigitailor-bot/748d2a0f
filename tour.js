@@ -6,7 +6,8 @@
    --------------------------------------------------------------- */
 
 const TOUR = [
-  { date: "2027-01-29", city: "Rennes",      venue: "L'Étage — showcase à l'Espace Club", tags: [],           state: "soldout" },
+  { date: "2027-01-29", city: "Rennes",      venue: "L'Étage",                            tags: [],           state: "soldout" },
+  { date: "2027-01-29", city: "Rennes",      venue: "L'Espace Club",                      tags: ["Showcase"], state: "soon" },
   { date: "2027-03-20", city: "Avignon",     venue: "Salle de l'Étoile",                  tags: [],           state: "soon" },
   { date: "2027-03-27", city: "Amnéville",   venue: "Le Galaxie",                         tags: ["Showcase"], state: "soon" },
   { date: "2027-04-02", city: "Toulouse",    venue: "Salle Interférence",                 tags: [],           state: "soon" },
