@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NIRO — Tournée 2027</title>
+  <meta name="description" content="NIRO, tournée 2027. Toutes les dates, les villes et la billetterie officielle : Rennes, Avignon, Amnéville, Toulouse, Bordeaux, Amiens, Lyon, Brest, Bruxelles, Lille, Montpellier, Marseille, Nantes, Liège, Dijon, Montréal.">
+  <meta name="theme-color" content="#08080a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NIRO — Tournée 2027">
+  <meta property="og:description" content="Toutes les dates de la tournée 2027 et la billetterie officielle.">
+  <meta property="og:image" content="assets/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308080a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23f4f1ea' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#dates">Aller aux dates</a>
+
+  <header class="site-head">
+    <a class="wordmark" href="#top" aria-label="NIRO — accueil">NIRO</a>
+    <div class="head-side">
+      <span class="head-meta">Tournée 2027</span>
+      <a class="head-cta" href="#dates">Billetterie</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media">
+        <img src="assets/hero.jpg" alt="Niro — visuel de la tournée 2027" width="1600" height="1067">
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Tournée 2027</p>
+        <h1 class="hero-title">
+          <span>Tournée</span>
+          <span>2027</span>
+        </h1>
+        <p class="hero-sub" id="hero-sub">France · Belgique · Canada</p>
+        <a class="scroll-cue" href="#dates">
+          Voir les dates
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <div class="summary" aria-hidden="true">
+      <span id="summary-range">Janvier — Août 2027</span>
+      <span class="summary-right"><b id="summary-count">16</b> dates</span>
+    </div>
+
+    <section class="dates" id="dates" aria-labelledby="dates-title">
+      <h2 class="visually-hidden" id="dates-title">Dates de la tournée 2027</h2>
+      <div id="tour-list"></div>
+      <noscript>
+        <p class="noscript">Active JavaScript pour afficher les dates, ou consulte la billetterie officielle.</p>
+      </noscript>
+    </section>
+
+    <section class="tba" aria-labelledby="tba-title">
+      <div class="tba-inner">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>À venir</p>
+        <h2 class="tba-city" id="tba-title">Montréal</h2>
+        <p class="tba-text">Olympia — la date sera annoncée cette semaine.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <span>NIRO — Tournée 2027</span>
+    <span class="foot-note">Billetterie officielle uniquement.</span>
+  </footer>
+
+  <script src="tour.js"></script>
+</body>
+</html>
