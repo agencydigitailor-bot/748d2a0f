@@ -16,11 +16,11 @@ const TOUR = [
   { date: "2027-04-10", city: "Rennes",      venue: "BOOMIN FEST",             kind: "Festival", tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/boomin-fest-rennes-liberte" },
   { date: "2027-04-14", city: "Lyon",        venue: "Le Transbordeur",         kind: "Concert",  tags: [],           state: "soon" },
   { date: "2027-04-23", city: "Brest",       venue: "Brest Arena",             kind: "Concert",  tags: [],           state: "soon" },
-  { date: "2027-04-24", city: "Bruxelles",   venue: "La Madeleine",            kind: "Concert",  tags: ["Belgique"], state: "soon" },
+  { date: "2027-04-24", city: "Bruxelles",   venue: "La Madeleine",            kind: "Concert",  tags: ["Belgique"], state: "onsale", url: "https://bit.ly/niro-lamadeleine" },
   { date: "2027-05-05", city: "Lille",       venue: "Zénith Lille",            kind: "Concert",  tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/rawww-verone-niro-zenith-lille" },
   { date: "2027-05-14", city: "Montpellier", venue: "Rockstore",               kind: "Concert",  tags: [],           state: "soldout" },
   { date: "2027-05-15", city: "Marseille",   venue: "Salle des Sucres",        kind: "Concert",  tags: [],           state: "soon" },
-  { date: "2027-05-22", city: "Nantes",      venue: "BOOMIN FEST",             kind: "Festival", tags: [],           state: "soon" },
+  { date: "2027-05-22", city: "Nantes",      venue: "BOOMIN FEST",             kind: "Festival", tags: [],           state: "onsale", url: "https://linktr.ee/BoominFestNantes2027" },
   { sort: "2027-07-01", dayText: "Début", wdText: "juil.", city: "Liège", venue: "Les Ardentes", kind: "Festival", tags: ["Belgique"], state: "soon" },
   { date: "2027-08-28", city: "Dijon",       venue: "Golden Coast Festival",   kind: "Festival", tags: [],           state: "soon" }
 ];
