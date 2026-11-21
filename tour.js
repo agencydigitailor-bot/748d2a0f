@@ -8,7 +8,7 @@
 const TOUR = [
   { date: "2027-01-29", city: "Rennes",      venue: "L'Étage",                 kind: "Concert",  tags: [],           state: "soldout" },
   { date: "2027-01-29", city: "Rennes",      venue: "L'Espace Club",           kind: "Showcase", tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/niro-x-l-espace-club" },
-  { date: "2027-03-20", city: "Avignon",     venue: "Salle de l'Étoile",       kind: "Concert",  tags: [],           state: "soon" },
+  { date: "2027-03-20", city: "Avignon",     venue: "Salle de l'Étoile",       kind: "Concert",  tags: [],           state: "onsale", url: "https://www.francebillet.com/event/niro-tournee-salle-de-letoile-chateaurenard-22426596" },
   { date: "2027-03-27", city: "Amnéville",   venue: "Le Galaxie",              kind: "Showcase", tags: [],           state: "soon" },
   { date: "2027-04-02", city: "Toulouse",    venue: "Salle Interférence",      kind: "Concert",  tags: [],           state: "onsale", url: "https://spectacles.bleucitron.net/reserver/niro-interference-balma/10783" },
   { date: "2027-04-03", city: "Bordeaux",    venue: "Salle du Grand Parc",     kind: "Concert",  tags: [],           state: "soldout" },
@@ -145,7 +145,7 @@ const render = () => {
   const subEl = document.getElementById("hero-sub");
   if (subEl) {
     const cities = new Set(items.map((i) => i.city)).size;
-    subEl.textContent = `${cities} villes · France · Belgique · Canada`;
+    subEl.textContent = `${cities} villes · France · Belgique`;
   }
 
   observeRows();

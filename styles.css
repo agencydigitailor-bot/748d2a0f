@@ -485,36 +485,6 @@ a.date-link:focus-visible::before { width: 14px; }
   font-size: 13px;
 }
 
-/* ---------- tba ---------- */
-
-.tba {
-  margin-top: clamp(60px, 9vw, 120px);
-  padding: calc(clamp(52px, 9vw, 108px) * var(--site-space, 1)) var(--gutter);
-  background: var(--bg-raise);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.tba-inner { max-width: 900px; }
-
-.tba-city {
-  margin: 0;
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: calc(clamp(46px, 9vw, 120px) * var(--site-type, 1));
-  line-height: 0.9;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-}
-
-.tba-text {
-  margin: 18px 0 0;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
 /* ---------- mentions légales ---------- */
 
 .legal {
