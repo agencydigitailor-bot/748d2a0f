@@ -15,7 +15,7 @@ const TOUR = [
   { date: "2027-04-09", city: "Amiens",      venue: "Zénith Amiens",           kind: "Concert",  tags: [],           state: "soldout" },
   { date: "2027-04-10", city: "Rennes",      venue: "BOOMIN FEST",             kind: "Festival", tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/boomin-fest-rennes-liberte" },
   { date: "2027-04-14", city: "Lyon",        venue: "Le Transbordeur",         kind: "Concert",  tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/niro-high-lo-lyon" },
-  { date: "2027-04-23", city: "Brest",       venue: "Brest Arena",             kind: "Concert",  tags: [],           state: "soon" },
+  { date: "2027-04-23", city: "Brest",       venue: "Brest Arena",             kind: "Concert",  tags: [],           state: "onsale", url: "https://www.fnacspectacles.com/event/niro-tournee-brest-arena-brest-22463552/" },
   { date: "2027-04-24", city: "Bruxelles",   venue: "La Madeleine",            kind: "Concert",  tags: ["Belgique"], state: "soldout" },
   { date: "2027-05-05", city: "Lille",       venue: "Zénith Lille",            kind: "Concert",  tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/rawww-verone-niro-zenith-lille" },
   { date: "2027-05-14", city: "Montpellier", venue: "Rockstore",               kind: "Concert",  tags: [],           state: "soldout" },
