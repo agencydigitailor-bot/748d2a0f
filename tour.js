@@ -6,6 +6,7 @@
    --------------------------------------------------------------- */
 
 const TOUR = [
+  { date: "2027-01-09", city: "Le Mans",     venue: "Antares Arena",           kind: "Showcase", tags: [],           state: "onsale", url: "https://www.unideal.fr/nocturne" },
   { date: "2027-01-29", city: "Rennes",      venue: "L'Étage",                 kind: "Concert",  tags: [],           state: "soldout" },
   { date: "2027-01-29", city: "Rennes",      venue: "L'Espace Club",           kind: "Showcase", tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/niro-x-l-espace-club" },
   { date: "2027-03-20", city: "Avignon",     venue: "Salle de l'Étoile",       kind: "Concert",  tags: [],           state: "onsale", url: "https://www.francebillet.com/event/niro-tournee-salle-de-letoile-chateaurenard-22426596" },
