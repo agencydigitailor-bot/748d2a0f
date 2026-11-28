@@ -19,7 +19,7 @@ const TOUR = [
   { date: "2027-04-24", city: "Bruxelles",   venue: "La Madeleine",            kind: "Concert",  tags: ["Belgique"], state: "soldout" },
   { date: "2027-05-05", city: "Lille",       venue: "Zénith Lille",            kind: "Concert",  tags: [],           state: "onsale", url: "https://shotgun.live/fr/events/rawww-verone-niro-zenith-lille" },
   { date: "2027-05-14", city: "Montpellier", venue: "Rockstore",               kind: "Concert",  tags: [],           state: "soldout" },
-  { date: "2027-05-15", city: "Marseille",   venue: "Salle des Sucres",        kind: "Concert",  tags: [],           state: "onsale", url: "https://www.fnacspectacles.com/event/niro-tournee-le-hangar-a-sucre-22466199/" },
+  { date: "2027-05-15", city: "Marseille",   venue: "Hangar à Sucre",          kind: "Concert",  tags: [],           state: "onsale", url: "https://www.fnacspectacles.com/event/niro-tournee-le-hangar-a-sucre-22466199/" },
   { date: "2027-05-22", city: "Nantes",      venue: "BOOMIN FEST",             kind: "Festival", tags: [],           state: "onsale", url: "https://linktr.ee/BoominFestNantes2027" }
 ];
 
